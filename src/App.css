@@ -1,0 +1,18 @@
+.lists{
+  width: 614px;
+height: 228px;
+border-width: 0.5px;
+border-radius: 20px;
+background: #EEF8FF;
+border: 0.5px solid #969696
+}
+.doctor_list{
+display: flex;
+}
+.doctor_img{
+  width: 161px;
+height: 177px;
+top: 26px;
+left: 29px;
+
+}
