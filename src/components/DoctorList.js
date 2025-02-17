@@ -4,13 +4,24 @@ import Sidebar from './Sidebar';
 import { useState } from "react";
 import SearchBar from './SearchBar';
 import clinics from '../data/clinics';
+import left from '../Images/Left.png';
+import { useNavigate } from "react-router-dom";
 function DoctorList({ doctors }) {
     const [activeTab, setActiveTab] = useState("doctor");
+    const navigate = useNavigate();
+    const handleBack = () => {
+        if (activeTab === "clinic") {
+            setActiveTab("doctor");
+        } else {
+            navigate(-1);
+        }
+    };
     return (
         <div className="doctor">
             <Sidebar />
             <div className="doc__recommedation">
-                Doctor & Clinic
+                <img src={left} alt='left arrow' className='back' onClick={handleBack} />
+                <div className="heading">Doctors & Clinics</div>
                 <div className="hamburger_menu">
                     <div className="hamburger">
                         <span className='bar'></span>

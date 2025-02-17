@@ -16,3 +16,10 @@ border: 1px solid #969696;
 display: flex;
 gap: 20px;
 }
+@media (max-width: 768px) {
+    .search-input{
+        width: 350px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}

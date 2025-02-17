@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .sidebar {
   width: 285px;
-  position: absolute;
+  position: fixed; 
   top: 0;
   left: 0;
-  min-height: 205vh; 
-  height: auto;
-  border-right: 0.8px solid #969696;
+  height: 100vh; 
+  overflow-y: auto; 
+  border-right: 1px solid #969696; 
   background: white;
 }
 
+
+.sidebar::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
 
 .sidebar__item {
   display: flex;
@@ -42,9 +55,9 @@ border: none;
 cursor: pointer;
 margin-left: 30px;
 }
+
+
 .Appointment{
-  width: 158;
-height: 27;
   margin-left: 55px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -57,8 +70,6 @@ height: 27;
   margin-top: 35px;
 }
 .appointment_text{
-  width: 119;
-height: 27;
 margin-left: 15px;
 font-family: Poppins;
 font-weight: 400;
@@ -68,4 +79,9 @@ letter-spacing: 0%;
 color: #000000;
 text-decoration: none; 
 
+}
+@media (max-width: 768px) {
+  .sidebar{
+    display: none;
+  }
 }
