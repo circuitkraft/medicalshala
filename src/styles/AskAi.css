@@ -10,8 +10,10 @@
 .ask-ai-container {
   display: flex;
   height: 100vh;
-  width: 100%;
+  width: 100vw;  
+  overflow: hidden;  
 }
+
 
 .sidebar {
     width: 250px;
@@ -73,7 +75,8 @@
   }
   
   .sidebar-logos{
-    font-size: 1.2em;
+    width: 20px;
+    height: 20px;
   }
   
 
@@ -135,9 +138,9 @@
 }
 
 .profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
   object-fit: cover;
 }
 
@@ -222,3 +225,135 @@
   border-radius: 50%;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  
+  .sidebar {
+    position: absolute;
+    left: -500px; 
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: #f9f9f9;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .chat-header h2{
+    margin-left: 30px;
+  }
+  
+  .sidebar.open {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .sidebar .logo,
+  .sidebar .schedule-btn {
+    display: none !important;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.6rem !important;
+    z-index: 1100;
+    cursor: pointer;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid black;
+   
+  }
+ 
+  .chat-section {
+    width: 100%;
+    transition: filter 0.3s ease;
+  }
+
+  .chat-section.blur-background {
+    filter: blur(3px);
+  }
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-icon {
+  width: 24px; 
+  height: 24px;
+}
+
+.nav-item span {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333; 
+}
+.chat-input {
+  position: relative; 
+  bottom: 35px; 
+  margin-bottom: 15px; 
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  background: white;
+}
+
+}
+
+@media screen and (min-width: 769px) {
+  
+  .sidebar {
+    left: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+  .sidebar .logo {
+    display: block !important;
+    width: 150px;
+    height: auto;
+  }
+
+  .sidebar .schedule-btn {
+    display: block !important;
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  
+  .bottom-nav {
+    display: none !important;
+  }
+
+  .menu-icon {
+    display: none !important;
+  }
+}
+
+

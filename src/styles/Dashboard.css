@@ -1,0 +1,48 @@
+/* 📌 Dashboard Container */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    background: linear-gradient(to bottom, #0f3460, #3586ff);
+    color: white;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+/* 📌 Fade-out effect (only applies on mobile screens) */
+@media (max-width: 768px) {
+    .fade-out {
+        opacity: 0;
+    }
+}
+
+/* 📌 Content Box */
+.dashboard-content {
+    max-width: 90%;
+    width: 400px;
+}
+
+/* 📌 Heading */
+.dashboard-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 📌 Paragraph */
+.dashboard-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+}
+
+/* 🔹 Prevent browser text resizing */
+html, body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
