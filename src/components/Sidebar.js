@@ -13,7 +13,7 @@ import mail5 from '../Images/History (1).png';
 import mail6 from '../Images/Mail Box (5).png';
 
 function Sidebar() {
-    const location = useLocation(); // Get current path for active styling
+    const location = useLocation();
 
     return (
         <div className="sidebar">
@@ -25,10 +25,12 @@ function Sidebar() {
                     <img src={appoint} alt='appointment_logo' className='appointment_img' />
                     <span className='appointment_text'>Appointment</span>
                 </div>
-                <div className={`Appointment ${location.pathname === "/encounter" ? "active" : ""}`}>
-                    <img src={encounter} alt='appointment_logo' />
-                    <span className='appointment_text'>Encounter</span>
-                </div>
+                <Link to="/encounter" className={location.pathname === "/encounter" ? "active" : ""}>
+                    <div className={`Appointment ${location.pathname === "/encounter" ? "active" : ""}`}>
+                        <img src={encounter} alt='appointment_logo' />
+                        <span className='appointment_text'>Encounter</span>
+                    </div>
+                </Link>
                 <div className={`Appointment ${location.pathname === "/inbox" ? "active" : ""}`}>
                     <img src={mail} alt='appointment_logo' />
                     <span className='appointment_text'>Inbox</span>

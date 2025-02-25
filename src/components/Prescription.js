@@ -2,10 +2,13 @@ import Sidebar from "./Sidebar";
 import ellipse from "../Images/ellipse.jpg";
 import add from "../Images/more 7.png";
 import deletes from "../Images/trash 7.png";
+import left from '../Images/Left.png';
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Prescription.css";
 
 function Prescription() {
+    const navigate = useNavigate();
     const [period, setPeriod] = useState("AM");
     const [data, setData] = useState({
         doctorName: "",
@@ -29,7 +32,7 @@ function Prescription() {
     });
 
     useEffect(() => {
-        fetch("https://api.example.com/prescription") // Replace with actual API endpoint
+        fetch("https://api.example.com/prescription")
             .then(response => response.json())
             .then(fetchedData => setData(fetchedData))
             .catch(error => console.error("Error fetching data:", error));
@@ -38,6 +41,10 @@ function Prescription() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setData(prevData => ({ ...prevData, [name]: value }));
+    };
+
+    const handleBack = () => {
+        navigate(-1);
     };
 
     const btns = [
@@ -53,6 +60,7 @@ function Prescription() {
             <Sidebar />
             <div className="prescription__container">
                 <div className="pres__recommedation">
+                    <img src={left} alt='left arrow' className='back' onClick={handleBack} />
                     Prescription Recommendation
                     <div className="hamburger_menu">
                         <div className="hamburger">
@@ -75,18 +83,8 @@ function Prescription() {
                                 <div className="time-input">
                                     <input type="number" name="timeHours" max="12" min="0" className="time-box" value={data.timeHours} onChange={handleChange} /> :
                                     <input type="number" name="timeMinutes" max="60" min="0" className="time-box" value={data.timeMinutes} onChange={handleChange} />
-                                    <span
-                                        className={`am-pm ${period === "AM" ? "selected" : ""}`}
-                                        onClick={() => setPeriod("AM")}
-                                    >
-                                        AM
-                                    </span>
-                                    <span
-                                        className={`am-pm ${period === "PM" ? "selected" : ""}`}
-                                        onClick={() => setPeriod("PM")}
-                                    >
-                                        PM
-                                    </span>
+                                    <span className={`am-pm ${period === "AM" ? "selected" : ""}`} onClick={() => setPeriod("AM")}>AM</span>
+                                    <span className={`am-pm ${period === "PM" ? "selected" : ""}`} onClick={() => setPeriod("PM")}>PM</span>
                                 </div>
                             </span>
                         </div>

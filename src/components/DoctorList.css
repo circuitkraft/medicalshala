@@ -37,6 +37,12 @@
   margin-left: 29px;
   margin-right: 10px;
   }
+  .ham1{
+
+    margin-left: 20%;
+    display: flex;
+    gap:10px
+  }
   .doctor_names{
 font-family: Poppins;
 font-weight: 500;
@@ -77,13 +83,13 @@ height: 26px;
 margin-top: 13px;
   }
 
-  .tabs {
+  .tabs-1 {
     display: flex;
     gap: 20px;
     margin-left: 320px;
   }
   
-  .tab {
+  .tab-1{
     font-size: 16px;
     font-weight: bold;
     color: #000;
@@ -94,11 +100,11 @@ margin-top: 13px;
     position: relative;
   }
   
-  .tab.active {
+  .tab-1.active {
     color: #007bff;
   }
   
-  .tab.active::after {
+  .tab-1.active::after {
     content: "";
     width: 100%;
     height: 3px;
@@ -187,11 +193,10 @@ color: #0078D4;
     display: none;
   }
   @media (max-width: 768px) {
-    /* Doctor list should stay on the left */
     .doc__recommedation{
       display: flex;
-      flex-direction: row;  /* Stack the doctor list items vertically */
-      align-items: flex-start;  /* Align to the left */
+      flex-direction: row;  
+      align-items: flex-start; 
       margin-left: 20px;
       margin-right: auto;
       gap: 30px;
@@ -203,8 +208,8 @@ color: #0078D4;
     }
     .lists {
       display: flex;
-      flex-direction: column;  /* Stack the doctor list items vertically */
-      align-items: flex-start;  /* Align to the left */
+      flex-direction: column; 
+      align-items: flex-start;
       margin-left: 10px;
       gap: 10px;
       width: 97%;
@@ -214,7 +219,7 @@ color: #0078D4;
       width: 90%;
       margin: 10px 0;
       display: flex;
-      flex-direction: row;  /* Align the doctor image and text horizontally */
+      flex-direction: row;  
       gap: 15px;
       background: #EEF8FF;
       border-radius: 20px;
@@ -232,13 +237,9 @@ color: #0078D4;
       font-size: 16px;
       margin-top: 10px;
     }
-  
-    /* Hide the sidebar on mobile */
     .sidebar {
       display: none;
     }
-  
-    /* Ensure the tabs are aligned vertically for mobile */
     .tabs {
       flex-direction: row;
       margin-left: 20px;
@@ -250,8 +251,8 @@ color: #0078D4;
     }
     .list{
       display: flex;
-      flex-direction: column;  /* Stack the doctor list items vertically */
-      align-items: flex-start;  /* Align to the left */
+      flex-direction: column;  
+      align-items: flex-start;  
       margin-left: 10px;
       gap: 10px;
       width: 97%;
@@ -286,6 +287,13 @@ cursor: pointer;
   }
   
   @media (max-width: 480px) {
+    .tabs-1{
+      margin-right: auto;
+      margin-left: 20px;
+    }
+    .heading{
+      font-size: 15px;
+    }
     .doctor_list {
       padding: 8px;
     }

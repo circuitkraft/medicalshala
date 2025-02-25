@@ -22,24 +22,26 @@ function DoctorList({ doctors }) {
             <div className="doc__recommedation">
                 <img src={left} alt='left arrow' className='back' onClick={handleBack} />
                 <div className="heading">Doctors & Clinics</div>
-                <div className="hamburger_menu">
-                    <div className="hamburger">
-                        <span className='bar'></span>
-                        <span className='bar'></span>
-                        <span className='bar'></span>
+                <div className="ham1">
+                    <div className="hamburger_menu">
+                        <div className="hamburger">
+                            <span className='bar'></span>
+                            <span className='bar'></span>
+                            <span className='bar'></span>
+                        </div>
                     </div>
+                    <img src={ellipse} alt="profile_pic" className="profile_pic" />
                 </div>
-                <img src={ellipse} alt="profile_pic" className="profile_pic" />
             </div>
-            <div className="tabs">
+            <div className="tabs-1">
                 <button
-                    className={activeTab === "doctor" ? "tab active" : "tab"}
+                    className={activeTab === "doctor" ? "tab-1 active" : "tab-1"}
                     onClick={() => setActiveTab("doctor")}
                 >
                     Doctor
                 </button>
                 <button
-                    className={activeTab === "clinic" ? "tab active" : "tab"}
+                    className={activeTab === "clinic" ? "tab-1 active" : "tab-1"}
                     onClick={() => setActiveTab("clinic")}
                 >
                     Clinic

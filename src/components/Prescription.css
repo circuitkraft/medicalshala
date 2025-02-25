@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .prescription{
   display: flex;
 }
@@ -8,8 +7,7 @@
   margin-top: 10px;
 }
 .pres__recommedation{
-  width: 435;
-height: 42;
+  width: auto;
 top: 28px;
 left: 337px;
 font-family: "Poppins", serif;
@@ -19,8 +17,9 @@ line-height: 42px;
 letter-spacing: 0%;
 color: #000000;
 display: flex;
-gap: 10px;
+gap: 20px;
 }
+
 .hamburger {
   width: 20px;
   height: 22px;
@@ -29,7 +28,7 @@ gap: 10px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
- margin-left: 350px;
+ margin-left: 300px;
  padding: 15px;
 }
 
@@ -40,13 +39,12 @@ gap: 10px;
   margin: 2px 0;
   
 }
-.profile_pic{
-  width: 55px;
-height: 58px;
-top: 24px;
-left: 1630px;
+.profile_pic {
+  width: 55px !important;
+  height: 58px !important;
   border-radius: 50%;
 }
+
 .details{
   width: 169px;
 height: 36px;
@@ -540,3 +538,119 @@ color: #1E1E1E;
   margin-bottom: 50px;
   margin-left: 10px;
 }
+@media screen and (max-width: 768px) {
+  .prescription {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prescription__container {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 90%;
+  }
+
+  .pres__recommedation {
+    font-size: 22px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+
+  .profile_pic {
+    width: 45px;
+    height: 45px;
+  }
+
+  .details {
+   
+    text-align: center;
+  }
+
+  .box1, .box2, .box3 {
+    width: 95%;
+    left: 0;
+    margin: 10px auto;
+    border: none;
+  }
+
+  .doctor_name, .hospital_name, .dates{
+    width: 70%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .patient_name, .patient_age{
+    width: 70%;
+    margin-left: 0;
+    margin-top: 10px;
+  } .Medical_name, .Medical_quantity, .Medical_timing, .Medical_days {
+    margin-top: 10px;
+    width: 70%;
+    margin-left: -5px
+  }
+  .gender-picker {
+    justify-content: center;
+    float: none;
+    margin: 10px auto;
+    margin-left: -100px;
+  }
+
+  .reason {
+    width: 70%;
+  }
+  .reason1 {
+    width: 69%;
+  }
+  .add_icon{
+    margin-top: -600px;
+    margin-left: -50px;
+  }
+  .time_picker{
+    font-size: 14px;
+    width: 70%;
+  }
+  .medical-picker {
+    margin: 10px 0;
+  }
+  .box3_form {
+    width: 100%;
+  }
+  .medical-input {
+    width: 100%;
+    font-size: 16px;
+  }
+  .follow_details {
+    font-size: 18px;
+  }
+.button , .none-btn{
+  width: 102px;
+height: 28px;
+top: 781px;
+left: 122px;
+font-family: Poppins;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0%;
+
+}
+.save_btn{
+  width: 133px;
+  height: 35px;
+  top: 855px;
+  left: 140px;
+  border-radius: 10px;  
+  background: #0078D4;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0%;
+
+}
+}
+
