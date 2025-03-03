@@ -180,7 +180,7 @@ const isMobile = window.innerWidth <= 768;
             <>
               <li><img src={profile1} alt="profile-icon" className="sidebar-logos"/> My Profile</li>
               <li onClick={handleEncounter}><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
-              <li onClick={handleDoctorClinic}><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
+              <li onClick={handleDoctorClinic} className="active"><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
               <li onClick={handlePrescription}><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
               <li onClick={handleBedAllotment}><img src={bedallotment} alt="bed-allotment" className="sidebar-logos"/> Bed Allotment</li>
               <li onClick={handlePayment}><img src={wallet} alt="wallet-icon" className="sidebar-logos"/> Payment</li>

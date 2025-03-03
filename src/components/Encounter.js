@@ -145,7 +145,7 @@ const Encounter = () =>{
           {isMobile ? (
             <>
               <li><img src={profile1} alt="profile-icon" className="sidebar-logos"/> My Profile</li>
-              <li><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
+              <li className="active"><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
               <li onClick={handleDoctorClinic}><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
               <li><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
               <li onClick={handleBedAllotment}><img src={bedallotment} alt="bed-allotment" className="sidebar-logos"/> Bed Allotment</li>
@@ -328,7 +328,23 @@ const Encounter = () =>{
     </div>
   )}
 </div>
-
+{!sidebarOpen && (
+          <div className="bottom-nav">
+          <div className="nav-item">
+            <img src={appointment} alt="home-icon" className="nav-icon" onClick={handleAppointment}/>
+            <span>Home</span>
+          </div>
+          <div className="nav-item" onClick={handleInbox}>
+            <img src={inbox} alt="inbox-icon" className="nav-icon"/>
+            <span>Inbox</span>
+          </div>
+          <div className="nav-item">
+            <img src={askai} alt="ask-ai" className="nav-icon"/>
+            <span>Ask AI</span>
+          </div>
+        </div>
+        
+        )}
       </div>
         </div>
     );

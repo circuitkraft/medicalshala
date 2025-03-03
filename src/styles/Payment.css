@@ -144,4 +144,51 @@ body {
     padding: 8px;
     text-align: left;
   }
-  
+@media (max-width: 768px){
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-icon {
+  width: 24px; 
+  height: 24px;
+}
+
+.nav-item span {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333; 
+}
+.payment-wrapper{
+    margin-left: 5px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+.revenue-chart{
+    width: 50px;
+}
+.transaction-details{
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    overflow: scroll;
+}
+.transaction-details table{
+    width: 50%;
+}
+
+
+}

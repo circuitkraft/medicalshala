@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import logo from "../Images/medicalshala.png";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const DoctorSignup = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +38,10 @@ const DoctorSignup = () => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
   };
-
+const navigate = useNavigate();
+const handleRegister = () =>{
+  navigate("/askai");
+}
   return (
     <div className="signup-container">
       <div className="signup-box">
@@ -128,7 +132,7 @@ const DoctorSignup = () => {
             />
             <label> Terms & Conditions</label>
           </div>
-          <button type="submit" className="register-button">
+          <button type="submit" className="register-button" onClick={handleRegister}>
             Register
           </button>
         </form>

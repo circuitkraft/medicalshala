@@ -69,6 +69,9 @@ useEffect(() => {
   const handlePayment = () =>{
     navigate("/payment");
   }
+  const handleEncounter = () =>{
+    navigate("/encounter");
+  }
   const [messages, setMessages] = useState([
     { sender: "user", text: "What does this X-ray show?" },
     {
@@ -101,8 +104,8 @@ useEffect(() => {
         <ul>
           {isMobile ? (
             <>
-              <li><img src={profile1} alt="profile-icon" className="sidebar-logos"/> My Profile</li>
-              <li><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
+              <li onClick={handleDoctorClinic}><img src={profile1} alt="profile-icon" className="sidebar-logos"/> My Profile</li>
+              <li onClick={handleEncounter}><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
               <li onClick={handleDoctorClinic}><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
               <li onClick={handlePrescription}><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
               <li onClick={handleBedAllotment}><img src={bedallotment} alt="bed-allotment" className="sidebar-logos"/> Bed Allotment</li>
@@ -115,7 +118,7 @@ useEffect(() => {
           ) : (
             <>
               <li onClick={handleAppointment}><img src={appointment} alt="appointment-icon" className="sidebar-logos"/> Appointment</li>
-              <li><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
+              <li onClick={handleEncounter}><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
               <li onClick={handleClick}><img src={inbox} alt="inbox-icon" className="sidebar-logos"/> Inbox</li>
               <li className="active"><img src={askai} alt="askai-icon" className="sidebar-logos"/> Ask AI</li>
               <li onClick={handlePrescription}><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>

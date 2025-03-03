@@ -124,7 +124,7 @@ const Payment = () => {
               <li onClick={handleDoctorClinic}><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
               <li onClick={handlePrescription}><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
               <li onClick={handleBedAllotment}><img src={bedallotment} alt="bed-allotment" className="sidebar-logos"/> Bed Allotment</li>
-              <li onClick={handlePayment}><img src={wallet} alt="wallet-icon" className="sidebar-logos"/> Payment</li>
+              <li onClick={handlePayment} className="active"><img src={wallet} alt="wallet-icon" className="sidebar-logos"/> Payment</li>
               <li><img src={history} alt="history-icon" className="sidebar-logos"/> History</li>
               <li><img src={campaign} alt="campaign-icon" className="sidebar-logos"/> Campaign</li>
               <li><img src={settings} alt="settings-icon" className="sidebar-logos"/> Settings</li>
@@ -139,7 +139,7 @@ const Payment = () => {
               <li onClick={handlePrescription}><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
               <li onClick={handleDoctorClinic}><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
               <li onClick={handleBedAllotment}><img src={bedallotment} alt="bedallotment-icon" className="sidebar-logos"/> Bed Allotment</li>
-              <li onClick={handlePayment} className="active"    ><img src={wallet} alt="wallet-icon" className="sidebar-logos"/> Payment</li>
+              <li onClick={handlePayment} className="active"><img src={wallet} alt="wallet-icon" className="sidebar-logos"/> Payment</li>
               <li><img src={history} alt="history-icon" className="sidebar-logos"/> History</li>
               <li><img src={campaign} alt="campaign-icon" className="sidebar-logos"/> Campaign</li>
             </>
@@ -191,7 +191,8 @@ const Payment = () => {
       <div className="charts-container">
         <div className="revenue-chart">
           <h3>Revenue Analysis</h3>
-          <BarChart width={500} height={250} data={revenueData}>
+          {isMobile? (
+          <BarChart width={350} height={250} data={revenueData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="day" />
             <YAxis />
@@ -199,6 +200,16 @@ const Payment = () => {
             <Legend />
             <Bar dataKey="revenue" fill="#3b82f6" />
           </BarChart>
+          ) : (
+            <BarChart width={500} height={250} data={revenueData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="day" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="revenue" fill="#3b82f6" />
+          </BarChart>
+          )}
         </div>
 
         <div className="mode-of-payment">
@@ -258,6 +269,23 @@ const Payment = () => {
           <Tooltip />
         </PieChart>
       </div>
+      {!sidebarOpen && (
+          <div className="bottom-nav">
+          <div className="nav-item">
+            <img src={appointment} alt="home-icon" className="nav-icon" onClick={handleAppointment}/>
+            <span>Home</span>
+          </div>
+          <div className="nav-item" onClick={handleInbox}>
+            <img src={inbox} alt="inbox-icon" className="nav-icon"/>
+            <span>Inbox</span>
+          </div>
+          <div className="nav-item">
+            <img src={askai} alt="ask-ai" className="nav-icon"/>
+            <span>Ask AI</span>
+          </div>
+        </div>
+        
+        )}
     </div>
     </div>
   );

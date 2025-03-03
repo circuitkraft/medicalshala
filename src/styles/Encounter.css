@@ -352,4 +352,31 @@ cursor: pointer;
     .profile-pic{
         margin-left: 140px;
     }
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  .nav-icon {
+    width: 24px; 
+    height: 24px;
+  }
+  
+  .nav-item span {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333; 
+  }
   }

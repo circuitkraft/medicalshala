@@ -129,7 +129,7 @@ function Prescription() {
               <li><img src={profile1} alt="profile-icon" className="sidebar-logos"/> My Profile</li>
               <li onClick={handleEncounter}><img src={encounter} alt="encounter-icon" className="sidebar-logos"/> Encounter</li>
               <li onClick={handleDoctorClinic}><img src={doctor} alt="doctor-icon" className="sidebar-logos"/> Doctor & Clinic</li>
-              <li><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
+              <li className="active"><img src={prescription} alt="prescription-icon" className="sidebar-logos"/> Prescription</li>
               <li onClick={handleBedAllotment}><img src={bedallotment} alt="bed-allotment" className="sidebar-logos"/> Bed Allotment</li>
               <li onClick={handlePayment}><img src={wallet} alt="wallet-icon" className="sidebar-logos"/> Payment</li>
               <li><img src={history} alt="history-icon" className="sidebar-logos"/> History</li>
