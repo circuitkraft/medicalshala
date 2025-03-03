@@ -1,0 +1,198 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+.appointment-container {
+    display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  }
+  .sidebar {
+    width: 18%; /* Adjusted for better screen usage */
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .logo{
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .schedule-btn {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .sidebar nav ul {
+    list-style: none;
+    width: 100%;
+  }
+  .sidebar nav ul li {
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .appointment-container .sidebar nav ul li:hover,
+  .appointment-container .sidebar nav ul .active {
+  background-color: #E0F1FF;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #0078D4;
+}
+.sidebar-logos {
+    margin-right: 10px;
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Sections */
+  .section {
+    background: #f8fbff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  /* Gender */
+  .gender-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .gender-group input {
+    width: auto;
+  }
+  
+  /* Assistance Section */
+  .assistance {
+    display: flex;
+    justify-content: space-between;
+    background: #f8fbff;
+    padding: 15px;
+    border-radius: 8px;
+    align-items: center;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Schedule Button */
+  .schedule1-btn {
+    width: 100%;
+    padding: 12px;
+    background: #d3d3d3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: not-allowed;
+  }
+  .schedule1-btn.active {
+    background: #33cc66;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .appointment-container{
+        display: flex;
+        overflow: scroll;
+    }
+    .bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        margin-left: -20px;
+      }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .nav-icon {
+      width: 24px; 
+      height: 24px;
+    }
+    
+    .nav-item span {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #333; 
+    }
+  }

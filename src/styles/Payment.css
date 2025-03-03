@@ -1,0 +1,147 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+.payment-container {
+    display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  font-family: Arial, sans-serif;
+  overflow: scroll;
+  }
+  
+  .payment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.payment-wrapper {
+    flex: 1;
+    padding: 10px 20px; /* Adjust padding */
+    margin-left: 250px; /* Keeps space for sidebar */
+    margin-top: -700px; /* Move content further up */
+  }
+  .sidebar {
+    width: 18%; /* Adjusted for better screen usage */
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .logo{
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .schedule-btn {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .sidebar nav ul {
+    list-style: none;
+    width: 100%;
+  }
+  .sidebar nav ul li {
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .payment-container .sidebar nav ul li:hover,
+  .payment-container .sidebar nav ul .active {
+  background-color: #E0F1FF;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #0078D4;
+}
+
+.sidebar-logos {
+    margin-right: 10px;
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  .stats-overview {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+  }
+  
+  .stat-box {
+    background: #E5F4FF;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px #0078D4;
+    
+  }
+  .revenue{
+    background-color: white;
+    border: solid 1px white;
+    padding: 10px;
+  }
+  .revenue h4{
+    color: #969696;
+  }
+  .revenue-amount{
+    margin-left: 15px;
+    color: #0078D4;
+  }
+  .revenue-percentage{
+    margin-left: 25px;
+  }
+  .charts-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .payment-mode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .date-filter{
+    margin-left: 820px !important;
+    background-color: white;
+    border: solid 1px black;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  
+  .progress-bar {
+    width: 100px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    height: 8px;
+    border-radius: 5px;
+  }
+  
+  .transaction-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-details th, .transaction-details td {
+    padding: 8px;
+    text-align: left;
+  }
+  

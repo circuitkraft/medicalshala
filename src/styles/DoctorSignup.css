@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Added extra spacing at the top */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px; /* Moves form a bit down */
+}
+
+.signup-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 360px;
+  position: relative;
+}
+
+/* Adjusted logo size and spacing */
+.logo {
+  width: 80px;
+  margin-bottom: -8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -5px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #0078D4;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 10px;
+  color: #333;
+}
+
+/* Adjusted input fields and placeholders */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+
+/* Password visibility icon */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 16px;
+}
+
+/* Terms and conditions */
+.terms-container {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: #0078D4;
+}
+
+.terms-container input {
+  width: auto;
+  margin-right: 5px;
+  background-color: #0078D4;
+}
+
+/* Register button */
+.register-button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.register-button:hover {
+  background: #0056b3;
+}
+
+/* Social login */
+.social-signin {
+  margin: 12px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-btn, .apple-btn {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.google-btn:hover, .apple-btn:hover {
+  background: #f1f1f1;
+}
+
+/* Already have an account */
+.signin-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signin-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signin-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) { /* Mobile screens */
+  .signup-box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  input {
+    padding: 8px;
+  }
+
+  .register-button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .social-icons button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) { /* Tablets */
+  .signup-box {
+    width: 80%;
+  }
+}

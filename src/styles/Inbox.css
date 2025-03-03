@@ -1,0 +1,413 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inbox-container body {
+  overflow: hidden;
+}
+
+.inbox-container {
+  display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Sidebar */
+.inbox-container .sidebar {
+  width: 18%; /* Adjusted for better screen usage */
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.inbox-container .logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.inbox-container .schedule-btn {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.inbox-container .sidebar nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+.inbox-container .sidebar nav ul li {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.inbox-container .sidebar nav ul li:hover,
+.inbox-container .sidebar nav ul .active {
+  background-color: #E0F1FF;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #0078D4;
+}
+
+/* Inbox Section */
+.inbox-container .inbox-section {
+  width: 25%;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.inbox-container .inbox-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f1f1f1;
+  align-items: center;
+}
+
+.inbox-container .menu-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.inbox-container .tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.inbox-container .tab-buttons button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.inbox-container .tab-buttons .active {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.inbox-container .inbox-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.inbox-container .inbox-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.inbox-container .inbox-item.high {
+  color: red;
+}
+.inbox-container .inbox-item.medium {
+  color: orange;
+}
+.inbox-container .inbox-item.low {
+  color: green;
+}
+
+/* Chat Section */
+.inbox-container .chat-section {
+  flex-grow: 1; /* Allows chat to take full available space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.inbox-container .chat-block {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.inbox-container .chat-date {
+  text-align: center;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.inbox-container .chat-message {
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+.inbox-container .chat-message.patient {
+  background-color: #e3f2fd;
+  align-self: flex-start;
+}
+
+.inbox-container .chat-message.doctor {
+  background-color: #f1f8e9;
+  align-self: flex-end;
+}
+
+.inbox-container .chat-time {
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  color: #555;
+}
+
+.inbox-container .chat-footer {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  background: #fff;
+}
+
+.inbox-container .chat-footer input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.inbox-container .send-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.inbox-container .back-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  display: none;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .inbox-container.sidebar {
+    width: 20%;
+  }
+  
+  .inbox-container .inbox-section {
+    width: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .inbox-container {
+    flex-direction: column;
+  }
+
+  .inbox-container .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .inbox-container .inbox-section {
+    width: 100%;
+  }
+
+  .inbox-container .chat-section {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .inbox-container .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .inbox-container .sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: -300px !important;
+    width: 250px !important;
+    height: 100vh !important;
+    background: white !important; /* Debug color */
+    z-index: 9999 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+   
+  .inbox-container .chat-header h2{
+    margin-left: 30px;
+  }
+
+  .inbox-container .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.inbox-container .sidebar li {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+  
+.inbox-container .sidebar.open {
+    left: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .inbox-container .sidebar .logo,
+  .inbox-container .sidebar .schedule-btn {
+    display: none ;
+  }
+  
+  .inbox-container .menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.6rem;
+    z-index: 1100;
+    cursor: pointer;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid black;
+  }
+  .inbox-container .chat-section {
+    width: 100%;
+    transition: filter 0.3s ease;
+  }
+
+  .inbox-container .chat-section.blur-background {
+    filter: blur(3px);
+  }
+  .inbox-container .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .inbox-container .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.inbox-container .nav-icon {
+  width: 24px; 
+  height: 24px;
+}
+
+.inbox-container .nav-item span {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333; 
+}
+.inbox-container .chat-input {
+  position: relative; 
+  bottom: 35px; 
+  margin-bottom: 15px; 
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  background: white;
+}
+  
+  .inbox-container .inbox-section {
+    display: block;
+    width: 100%;
+  }
+
+
+  .inbox-container .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.inbox-container .nav-icon {
+  width: 24px; 
+  height: 24px;
+}
+
+.inbox-container .nav-item span {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333; 
+}
+.inbox-container .inbox-list {
+  max-height: 700px; 
+  overflow-y: auto; /* Enables vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds spacing between items */
+  padding-right: 10px; /* Prevents content from being cut off */
+}
+
+.inbox-container .inbox-header h3{
+  margin-left: 50px;
+}
+.inbox-container .inbox-section.hidden {
+  display: none;
+}
+.inbox-container .chat-section {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+}
+
+.inbox-container .chat-section.visible {
+  display: flex;
+  flex-direction: column;
+}
+.inbox-container.chat-header {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.inbox-container .back-btn {
+  display: block;
+  margin-left: 35px;
+}
+.inbox-container .menu-icon{
+  display: block;
+}
+.inbox-container .chat-footer{
+  padding-bottom: 52px;
+}
+
+}

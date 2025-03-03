@@ -1,0 +1,388 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+.bed-allotment-container {
+  display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  font-family: Arial, sans-serif;
+  overflow: auto;
+}
+.bed-allotment-content {
+  flex-grow: 1; /* Fills remaining space */
+  padding: 20px;
+/* Enables scrolling if content overflows */
+}
+.sidebar {
+  width: 18%; /* Adjusted for better screen usage */
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.logo{
+  width: 150px;
+  margin-bottom: 20px;
+}
+.schedule-btn {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar nav ul li {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+.bed-allotment-container .sidebar nav ul li:hover,
+.bed-allotment-container .sidebar nav ul .active {
+  background-color: #E0F1FF;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #0078D4;
+}
+.sidebar-logos {
+    margin-right: 10px;
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start;
+    gap: 10px; /* Space between heading and search bar */
+  }
+  
+  .header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .header-actions input{
+    width: 500px;
+  }
+  .search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 1200px !important;
+  }
+  
+  .profile{
+    margin-left: 1200px;
+    margin-top: -50px;
+  }
+
+.header input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.patients-admitted{
+  width: 100%;
+  height: 150px;
+  background-color: #3B79C1;
+  border-radius: 15px;
+  align-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+}
+.patients-admitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.patients-admitted h3{
+  color: white;
+}
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.stat-box {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat-content {
+  display: flex;
+  align-items: center; /* Align image and text in one line */
+  gap: 10px; /* Space between image and text */
+}
+.patient{
+  height: 40px;
+  width: 50px;
+  padding-top: 2px;
+  background-color: #63BBFF;
+  border-radius: 5px;
+}
+.patient img {
+  width: 40px; /* Adjust image size */
+  height: 40px;
+}
+.stat-box .patient img {
+  width: 40px;  /* Small icon size */
+  height: 40px;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align text */
+  color: #0078D4;
+}
+.chart-bed-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+.chart-container {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  flex: 2;
+}
+
+.bed-occupancy {
+  flex: 1; /* Takes less space */
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.bed-occupancy ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bed-occupancy h3 {
+  margin-bottom: 10px;
+}
+.bed-occupancy li {
+  display: flex;
+  align-items: center; /* Align items in a straight line */
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+.bed-occupancy li:last-child {
+  border-bottom: none;
+}
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: blue;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+.bed-table {
+  flex: 2;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bed-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bed-table th, .bed-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.bed-table th {
+  background-color: #f4f4f4;
+}
+.bed-table td button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bed-table td.occupied {
+  color: red;
+}
+
+.bed-table td.available {
+  color: green;
+}
+
+.bed-table td.maintenance {
+  color: orange;
+}
+
+.bed-table button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bed-table {
+  flex: 2; /* Gives more space to the table */
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
+.bed-table .discharge {
+  background-color: white;
+  color: #0078D4;
+  border: 1px solid #0078D4;
+  border-radius: 50px;
+  width: 100px;
+}
+
+.bed-table .allocate {
+  background-color: white;
+  color: #0078D4;
+  border: 1px solid #0078D4;
+  border-radius: 50px;
+  width: 100px;
+}
+
+.bed-table .update {
+  background-color: white;
+  color: #0078D4;
+  border: 1px solid #0078D4;
+  border-radius: 50px;
+  width: 100px;
+}
+
+.bed-analysis-chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bed-analysis-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input {
+    width: 90%; /* Makes it fit better on small screens */
+    max-width: 200px;
+  }
+  .patients-admitted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    height: 50%;
+  }
+  .overview {
+    display: flex;
+    flex-direction: column; /* Force column layout */
+    align-items: center; /* Center align */
+    width: 100%;
+  }
+  .profile{
+   display: flex;
+  }
+  
+  
+  .stat-box {
+    width: 90%; /* Adjust width for better fit */
+    max-width: 300px; /* Prevents excessive stretching */
+  }
+  .chart-bed-container {
+    flex-direction: column; /* Stack elements */
+  }
+
+  .bed-analysis-container {
+    flex-direction: column; /* Stack table and pie chart */
+    align-items: center;
+    width: 28%;
+  }
+
+  .bed-table {
+    width: 100%;
+    overflow-x: auto; /* Ensures table remains scrollable */
+  }
+
+
+  .bed-table table {
+    font-size: 14px;
+    display: flex; /* Reduce table font size */
+    flex-direction: column;
+  }
+  .stat-box {
+    min-width: 120px;
+  }
+
+  .bed-occupancy ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progress-bar {
+    width: 70%; /* Adjusted for small screens */
+  }
+  .chart-container {
+    width: 100%;
+    overflow-x: auto; /* Enables scrolling if needed */
+  }
+
+  .line-chart {
+    width: 100%;
+    min-width: 350px; /* Ensures it scales */
+  }
+  
+}

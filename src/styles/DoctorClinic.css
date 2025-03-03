@@ -1,0 +1,231 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+.doctor-clinic-container {
+    display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  }
+  .sidebar {
+    width: 18%; /* Adjusted for better screen usage */
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .logo{
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .schedule-btn {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .sidebar nav ul {
+    list-style: none;
+    width: 100%;
+  }
+  .sidebar nav ul li {
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .doctor-clinic-container .sidebar nav ul li:hover,
+  .doctor-clinic-container .sidebar nav ul .active {
+  background-color: #E0F1FF;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #0078D4;
+}
+.sidebar-logos {
+    margin-right: 10px;
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  /* Sidebar Placeholder */
+  .sidebar-placeholder {
+    width: 250px; /* Adjust width based on your sidebar */
+    background-color: #f8f9fc;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .menu{
+    margin-left: 950px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0;
+  }
+  
+  .tabs span {
+    cursor: pointer;
+    padding-bottom: 5px;
+  }
+  
+  .tabs .active {
+    border-bottom: 2px solid #0078D4;
+    color: #0078D4;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .filter-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Doctor List */
+  .doctor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Doctor Card */
+  .doctor-card {
+    display: flex;
+    background: #EEF8FF;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+  }
+  
+  .doctor-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .doctor-info h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .doctor-info h3 span {
+    font-size: 16px;
+    color: black;
+  }
+  
+  .doctor-info p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .clinic {
+    font-weight: 600;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .star-icon {
+    color: gold;
+    margin-left: 5px;
+  }
+  @media (max-width: 768px) {
+    .doctor-list {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller cards */
+        gap: 10px;
+      }
+    
+      .doctor-card {
+        padding: 10px;
+        max-width: 400px;
+      }
+      .bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        margin-left: -20px;
+      }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .nav-icon {
+      width: 24px; 
+      height: 24px;
+    }
+    
+    .nav-item span {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #333; 
+    }
+  }
+  
